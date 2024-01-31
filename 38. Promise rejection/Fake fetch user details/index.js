@@ -1,7 +1,11 @@
 import {fakeFetch} from "./helpers.js";
 
 const logUserDetails = () => {
-    fakeFetch("user-details").catch(error => {
+    fakeFetch("user-details")
+    .then(value => {
+        console.log(value)
+    })
+    .catch(error => {
         console.error(error)
     })
 }
