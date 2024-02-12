@@ -2,9 +2,9 @@
  * @param {string} cssSelector
  */
 const getTextFromSelector = cssSelector => {
-    const text = document.querySelector(cssSelector)
-    if (text) {
-        return text.textContent
+    const element = document.querySelector(cssSelector)
+    if (element) {
+        return element.textContent
     } else {
         return ""
     }
