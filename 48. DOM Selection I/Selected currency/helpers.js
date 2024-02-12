@@ -1,4 +1,3 @@
 export const getSelectedCurrency = () => {
-    const text = document.querySelector(".card.active")
-    return text.textContent
+    return document.querySelector(".card.active").textContent
 }
