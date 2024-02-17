@@ -13,7 +13,11 @@ data.forEach(item => {
 
 const search = document.querySelector("#app-search")
 search.addEventListener("keyup", event => {
-    if (event.key !== "") {
+    if (inputForm.value === "") {
+        data.forEach(item => {
+            list.insertAdjacentHTML("afterbegin", `<li>${item.spacecraft}</li>`);
+        })
+    } else {
         list.innerHTML = ""
         const input_low = inputForm.value.toLowerCase().trim()
         console.log(input_low)
